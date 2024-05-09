@@ -1,13 +1,15 @@
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
 import { Link, Tooltip } from "@nextui-org/react";
+import { MouseEventHandler } from "react";
 
 const Contact = () => {
   const myEmail = "michele.monteferrante@gmail.com";
   const myPhone = "+39 3200885296";
 
-  function copyOnClick(event: MouseEvent) {
+  const copyOnClick: MouseEventHandler<HTMLDivElement> = (event) => {
     let textToCopy = "";
-    const targetid = event?.target?.id;
+    const target = event?.target as HTMLDivElement;
+    const targetid = target?.id;
     if (targetid == "email") {
       textToCopy = myEmail;
     }
@@ -16,7 +18,7 @@ const Contact = () => {
     }
     copyTextToClipboard(textToCopy);
     console.log("Testo copiato:", textToCopy);
-  }
+  };
   function copyTextToClipboard(text: string) {
     navigator.clipboard.writeText(text);
   }

@@ -60,7 +60,7 @@ const Header = () => {
             </p>
           </a>
         </div>
-        <Scroll_linked color="primary-100" />
+        <Scroll_linked />
       </div>
     </>
   );
