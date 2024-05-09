@@ -1,0 +1,49 @@
+{
+  "presentation": "Presentation",
+  "about": "About Me:",
+  "presentation_text": "I am Michele Monteferrante, a software developer with training and experience in designing and developing technological solutions. Passionate about innovation, I am ready to put my skills at the service of ambitious projects.",
+  "experience": "Experience",
+  "project": "Projects",
+  "formation": "Education",
+  "contact": "Contact",
+  "sourceGitHub": "Visit the source code on GitHub.",
+  "experienceList": [
+    {
+      "place": "Digitalsoft Group",
+      "role": "Junior Software Developer",
+      "date": "April 2024 - May 2024",
+      "description": "Worked in a team for the development of a PLC Simulator with Backend in C# and Java, using .NET and Spring Frameworks. These backends use the OPC Unified Architecture structure, exposing REST APIs and a Web Socket for data exchange with a React.js Frontend."
+    }
+  ],
+  "formationList": [
+    {
+      "place": "ITIS E.Mattei , Vasto, Abruzzo",
+      "graduation": "High School Diploma in Applied Sciences",
+      "date": "September 2013 - June 2018",
+      "description": "Scientific high school diploma with option in Applied Sciences."
+    },
+    {
+      "place": "Istituto Infobasic, Pescara",
+      "graduation": "Certificate in Software Development",
+      "date": "September 2022 - May 2024",
+      "description": "Completed courses in:\n- Object-Oriented Programming with Python\n- Programming in JavaScript/TypeScript\n- Java programming up to Java Enterprise development\n- Developing dynamic websites with frameworks such as Flask, Spring, and React\n- Introduction to fundamental concepts of Big Data and Machine Learning."
+    }
+  ],
+  "projectList": [
+    {
+      "title": "Tic-Tac-Toe",
+      "text": "This project allows you to play the classic game of tic-tac-toe directly through a web page, with a Python Flask backend and a JavaScript frontend.",
+      "link": "https://github.com/miki0033/tris"
+    },
+    {
+      "title": "Expense-Manager",
+      "text": "Application for expense management, with a backend developed in Python Flask and a frontend developed in HTML5 and JavaScript.",
+      "link": "https://github.com/miki0033/Gestione-Spese"
+    },
+    {
+      "title": "HWreq",
+      "text": "Exercise projects on data structures in Python.",
+      "link": "https://github.com/miki0033/HWreq"
+    }
+  ]
+}
