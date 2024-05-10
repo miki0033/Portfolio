@@ -34,7 +34,7 @@ const Header = () => {
           ></Switch>
         </div>
         <div className="header flex flex-row w-full h-12 justify-evenly text-2xl font-bold ">
-          <a href="/#presentazione">
+          <a href="/#presentation">
             <p key={LanguageState.locale}>
               {LanguageState.messages.presentation as string}
             </p>

@@ -1,11 +1,11 @@
 import { useLanguageContext } from "../hook/useLanguageContext";
 import { Image } from "@nextui-org/react";
-import face from "..public\face.jpeg";
+import face from "../../public/face.jpeg";
 const Presentation = () => {
   const { LanguageState } = useLanguageContext();
 
   return (
-    <div id="presentation" className="flex flex-row m-8">
+    <div id="presentation" className="flex flex-row m-8 mt-32">
       <div id="sx" className="static min-w-[300px]">
         <Image
           className="w-full static"
