@@ -1,5 +1,6 @@
 import { useLanguageContext } from "../hook/useLanguageContext";
 import { Image } from "@nextui-org/react";
+import face from "..public\face.jpeg";
 const Presentation = () => {
   const { LanguageState } = useLanguageContext();
 
@@ -10,7 +11,7 @@ const Presentation = () => {
           className="w-full static"
           removeWrapper={true}
           alt=""
-          src="..\public\face.jpeg"
+          src={face}
         />
       </div>
       <div id="dx" className="flex flex-col items-center gap-2 m-8">
