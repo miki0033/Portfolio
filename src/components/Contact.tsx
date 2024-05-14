@@ -25,7 +25,7 @@ const Contact = () => {
 
   return (
     <div id="contact" className="contact bg-secondary-100 p-8 w-full">
-      <div className="flex flex-row justify-evenly">
+      <div className="flex md:flex-row flex-col justify-evenly">
         <Tooltip showArrow={true} content="Copy to clipboard">
           <div id="email" className="flex flex-row m-1" onClick={copyOnClick}>
             <EnvelopeIcon className="w-6 h-6 mx-2 m-1" />

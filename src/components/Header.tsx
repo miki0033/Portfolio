@@ -5,6 +5,9 @@ import { useState } from "react";
 import Icon from "./Icon";
 import Scroll_linked from "./Scroll_linked";
 import { useLanguageContext } from "../hook/useLanguageContext";
+import Sidebar from "./Sidebar";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import ILink from "../interfaces/ILink";
 
 const Header = () => {
   let languageState = false;
@@ -15,50 +18,54 @@ const Header = () => {
   } else languageState = true;
 
   const [isSelected, setIsSelected] = useState(languageState);
+  const mediaQuery = useMediaQuery("(min-width:576px)");
+  const linkList = [
+    {
+      text: LanguageState.messages.presentation as string,
+      href: "#presentation",
+    },
+    { text: LanguageState.messages.experience as string, href: "#experience" },
+    { text: LanguageState.messages.project as string, href: "#project" },
+    { text: LanguageState.messages.formation as string, href: "#formation" },
+    { text: LanguageState.messages.contact as string, href: "#contact" },
+  ];
+
   return (
     <>
       <div className="shadow-md shadow-black w-full fixed bg-secondary-100 z-20">
-        <div className="p-2 flex justify-end">
-          <Switch
-            defaultSelected
-            size="lg"
-            color={isSelected ? "success" : "danger"}
-            isSelected={isSelected}
-            onValueChange={(select: boolean) => {
-              setIsSelected(select);
-              updateLanguage();
-            }}
-            thumbIcon={({ isSelected }) =>
-              isSelected ? <Icon image={flagIt} /> : <Icon image={flagEn} />
-            }
-          ></Switch>
-        </div>
-        <div className="header flex flex-row w-full h-12 justify-evenly text-2xl font-bold ">
-          <a href="/#presentation">
-            <p key={LanguageState.locale}>
-              {LanguageState.messages.presentation as string}
-            </p>
-          </a>
-          <a href="/#experience">
-            <p key={LanguageState.locale}>
-              {LanguageState.messages.experience as string}
-            </p>
-          </a>
-          <a href="/#project">
-            <p key={LanguageState.locale}>
-              {LanguageState.messages.project as string}
-            </p>
-          </a>
-          <a href="/#formation">
-            <p key={LanguageState.locale}>
-              {LanguageState.messages.formation as string}
-            </p>
-          </a>
-          <a href="/#contact">
-            <p key={LanguageState.locale}>
-              {LanguageState.messages.contact as string}
-            </p>
-          </a>
+        <div
+          className={`header flex flex-row w-full h-12 ${
+            !mediaQuery ? "justify-between" : "justify-evenly"
+          } text-2xl font-bold `}
+        >
+          {!mediaQuery ? (
+            <>
+              <Sidebar linkList={linkList} />
+            </>
+          ) : (
+            <>
+              {linkList.map((li: ILink, idx: number) => (
+                <a href={li.href} key={idx}>
+                  <p key={LanguageState.locale}>{li.text}</p>
+                </a>
+              ))}
+            </>
+          )}
+          <div className="p-2 flex justify-end">
+            <Switch
+              defaultSelected
+              size="lg"
+              color={isSelected ? "success" : "danger"}
+              isSelected={isSelected}
+              onValueChange={(select: boolean) => {
+                setIsSelected(select);
+                updateLanguage();
+              }}
+              thumbIcon={({ isSelected }) =>
+                isSelected ? <Icon image={flagIt} /> : <Icon image={flagEn} />
+              }
+            ></Switch>
+          </div>
         </div>
         <Scroll_linked />
       </div>

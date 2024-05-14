@@ -22,7 +22,7 @@ const Projects = () => {
     <>
       <div
         id="project"
-        className="slider-container flex flex-row h-[300px] justify-evenly p-8 gap-4 rounded-md"
+        className="slider-container flex flex-row flex-wrap min-h-[300px] w-5/6 justify-evenly p-8 gap-4 rounded-md"
       >
         {projectList.map((project, idx) => {
           return (
