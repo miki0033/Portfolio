@@ -20,9 +20,10 @@ const Projects = () => {
 
   return (
     <>
+      <h1 className="font-bold ">{LanguageState.messages.project as string}</h1>
       <div
         id="project"
-        className="slider-container flex flex-row flex-wrap min-h-[300px] w-5/6 justify-evenly p-8 gap-4 rounded-md"
+        className="slider-container grid md:grid-cols-3 auto-cols-auto min-h-[300px] w-5/6 justify-evenly p-8 gap-4 rounded-md"
       >
         {projectList.map((project, idx) => {
           return (

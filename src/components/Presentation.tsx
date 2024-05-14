@@ -6,7 +6,7 @@ const Presentation = () => {
 
   return (
     <div id="presentation" className="flex md:flex-row flex-col m-8 mt-32">
-      <div id="sx" className="static min-w-[300px]">
+      <div id="sx" className="static max-w-[300px] justify-center">
         <Image
           className="w-full static"
           removeWrapper={true}

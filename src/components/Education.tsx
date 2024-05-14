@@ -8,9 +8,12 @@ const Education = () => {
 
   return (
     <>
+      <h1 className="font-bold ">
+        {LanguageState.messages.formation as string}
+      </h1>
       <div
         id="formation"
-        className="flex flex-row justify-evenly p-8 gap-4 rounded-md"
+        className="flex flex-row flex-wrap justify-evenly p-8 gap-4 rounded-md"
       >
         {formationList.map((formation, idx) => {
           return (

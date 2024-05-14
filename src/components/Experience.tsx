@@ -8,9 +8,12 @@ const Experience = () => {
 
   return (
     <>
+      <h1 className="font-bold ">
+        {LanguageState.messages.experience as string}
+      </h1>
       <div
         id="experience"
-        className="flex flex-col w-full items-center p-8 gap-4"
+        className="flex flex-col w-full flex-wrap items-center p-8 gap-4"
       >
         {experienceList.map((experience, idx) => {
           return (
